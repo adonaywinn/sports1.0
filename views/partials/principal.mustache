@@ -1,0 +1,66 @@
+<style>
+    .left {
+        background-color: #171716;
+        border-right: 3px solid #141413;
+    }
+    .principal {
+        flex:1;
+        background-color: #171716;
+        flex-direction: column;
+    }
+    .principal-search {
+        display: flex;
+        height: 6em;
+        width: 100%;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    .principal-search .search {
+        display: flex;
+        height: 4em;
+        width: 30%;
+        background-color: #292621;
+        margin-right: 4em;
+        border-radius: 10em;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        
+    }
+    .principal-search .search .search-game .icon-search {
+        height: 100%;
+        text-align: center;
+    }
+    .principal-search .search .search-game {
+        border-radius:0em 10em 10em 0em;
+        width: 90%;
+        height: 100%;
+        background: none;
+        border: none;
+        outline:none;
+        padding-left: 10px;
+        font-size: 1.8em;
+    }
+    .principal-content {
+        display: flex;
+        flex-direction:column;
+        
+    }
+    
+</style>
+<div class="principal">
+
+    <div class="principal-search">
+        <div class="search">
+            <i class="icon-search fas fa-search"></i>
+            <input class="search-game" type="search" name="search-game" placeholder="Digite o nome do Game" />
+        </div>
+    </div>
+
+    <div class="principal-content">
+         {{#users}}
+            <li style="font-size:2em;">{{nome}} - {{sobrenome}}</li></hr>
+         {{/users}}
+    </div>
+
+</div>

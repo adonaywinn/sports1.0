@@ -1,0 +1,58 @@
+    <style>
+    .menu-vertical-live {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        background-color: #171716;
+    }
+    .sub-menu-vertical-live {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 10px 0px 10px 0px;
+        border-bottom: 1px solid #333;
+    }
+  
+    .sub-menu-vertical-live button{
+        color:#9d9d9d;
+        flex: 1;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background: none;
+        border: none;
+        text-transform: capitalize;
+    }
+    .selected {
+        color: #fff !important;
+    }
+    </style>
+    <div class="menu-vertical-live">
+        <div class="sub-menu-vertical-live">
+            <button id="aovivo" onclick="selectMenu(this)">Ao Vivo</button>
+            <button id="1h" onclick="selectMenu(this)">1h</button>
+            <button id="2h" onclick="selectMenu(this)">2h</button>
+            <button id="3h" onclick="selectMenu(this)">3h</button>
+            <button style="margin-right: 10px;" id="proximos" onclick="selectMenu(this)">proximos eventos</button>
+        </div>
+    </div>
+    <script>
+        function selectMenu(elem){
+            let item = document.querySelector(".item-"+elem.id);
+            let segListEvents = document.querySelector(".seg-list-events");
+            for (const selec of document.querySelector('.sub-menu-vertical-live').children) {
+                selec.classList.remove('selected');
+            }
+            for (const child of segListEvents.children) {
+                if(child.classList == "title-seg-list-events"){
+                }else {
+                    child.style.display = "none";
+                    item.style.display = "flex";
+                    elem.classList.add('selected');
+                }
+            }
+        }             
+    </script>

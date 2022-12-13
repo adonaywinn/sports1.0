@@ -1,0 +1,148 @@
+<style>
+    :root {
+        --width-screen: 1500px;
+    }
+    #body {
+        overflow-x: hidden;
+    }
+    .container-teste {
+        display: flex;
+        width: 100%;
+        height:auto;
+        background-color: aquamarine;
+        transform-style: preserve-3d;
+          transform: scaleY(1.2) rotateX(-10deg) rotateY(-62deg) rotateZ(-1deg) translateX(calc(var(--width-screen)/ 2.1)) translateY(0px) translateZ(0px) skewX(0deg) skewY(0deg);
+
+    }
+    .painel {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        transform-style: preserve-3d;
+        perspective: var(--width-screen);
+        transition: transform 0.8s;
+
+    }
+    .painel-one {
+        display: flex;
+        height: 80%;
+        width: 100%;
+        background-color: blueviolet;
+        transform: rotateY(-60deg) translateZ(-100px);
+    }
+    .rotated {
+        display: flex;
+        height: 80%;
+        width: 100%;
+        background-color: blueviolet;
+    transform: rotate3d(-1, 1, 1, 90deg);
+    }
+    .cube {
+        display: flex;
+        height: 80%;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        padding: 2px;
+        flex-wrap: wrap;
+        background-color: blueviolet;
+        border: 10px solid #000;
+        object-fit: contain;
+}
+.cube-wrap {
+    display: flex;
+    z-index: 0;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    perspective: var(--width-screen);
+    perspective-origin: 50% 50%;
+    align-self: flex-end;
+}
+.item-cube {
+    display: flex;
+    height:100%;
+    width:100%;
+    background-color: #000;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.6em;
+    margin: 2px;
+    font-weight: bold;
+    box-shadow: 1px 2px 2px #050a30;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #fff;
+}
+
+.stars{
+  position: relative;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  box-shadow: 50px 30px white, 
+    100px 80px white,
+    80px 120px white,
+    300px 20px white,
+    250px 130px white,
+    200px 50px white,
+    150px 100px white,
+    320px 100px white;
+  animation: anim-stars 10s linear infinite;
+}
+
+.stars::after{
+  content: " ";
+  position: absolute;
+  top: 150px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  box-shadow: 50px 30px #e60ee6, 
+    100px 80px  #e60ee6,
+    80px 120px  #e60ee6,
+    300px 20px  #e60ee6,
+    250px 130px  #e60ee6,
+    200px 50px  #e60ee6,
+    150px 100px #e60ee6,
+    320px 100px  #e60ee6;
+}
+
+
+@keyframes anim-stars {
+    from {
+        transform: translateY(0px);
+    }
+    to {
+        transform: translateY(-150px);
+    }
+}
+</style>
+<div class="container-teste">
+    <div class="cube-wrap">
+        <div class="cube">
+
+            <script>
+                for(let i = 0; i < 150; i++){
+                    document.write('<div class="item-cube">FN</div>');
+                }
+            </script>
+
+        </div>
+        <div class="stars"></div>
+    </div>
+    <script>
+        let root = document.documentElement;
+        let widthscreen = window.screen.width;
+        console.log(widthscreen);
+        root.style.setProperty('--width-screen', widthscreen+"px" );
+    </script>
+</div>

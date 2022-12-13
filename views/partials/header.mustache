@@ -1,0 +1,60 @@
+
+<div class="header-menu-top">
+    <div class="logo-header-menu-top">
+    <button class="hamburger">
+        <!-- material icons https://material.io/resources/icons/ -->
+        <i class="menuIcon material-icons">menu</i>
+        <i class="closeIcon material-icons">close</i>
+    </button>
+        <!--i class="fa-solid fa-bars"></i-->
+        <a href="/"><img src="/images/logo-sport.gif"></a>
+    </div>
+    <div class="citem-header-menu-top">
+        <div class="item-header-submenu-top">
+            <ul class="menu-header-menu-top">
+                <li><a href="eventos-ao-vivo">Eventos ao vivo</a></li>
+                <li><a href="#">Proximos jogos</a></li>
+                <li><a href="#">Esporte virtual</a></li>
+                <li><a href="#">Caça niqueis</a></li>
+                <li><a href="#">Cassino ao vivo</a></li>
+                <li><a href="#">Bingo</a></li>
+            </ul>
+        </div>
+        <div class="infoaccount-header-submenu-top">
+            <div class="logado">
+                <div class="account-header-submenu-top">
+                    <span style="color: #f1f1f1; display:flex; flex-direction:row;" id="ballance-now">
+                        <span>R$ </span> 
+                        <b class="balance" style="display:none;"> * * * * *</b>
+                        <b class="balance-on"> 0,19</b>
+                        <i style="margin-left: 10px; font-size:1.2em !important;" class="hide-balance fas fa-eye"></i>
+                    </span>   
+                </div>
+
+                <div class="notify-account-submenu-top">
+                    <a href="/account"><i id="symbol-user" class="fas fa-user"></i></a>
+                    <button class="notification"><i id="symbol-coin" class="fa-solid fa-bell"></i></button>
+                </div>
+
+                <div class="add-credit-account-submenu-top"><i class="fa-solid fa-wallet"></i> Deposito</div>
+            </div>
+
+            <div class="deslogado">
+                <div class="btn-login-user">
+                    <span><a href="/user/entrar">Entrar</a></span>
+                    <span class="span-cadastrar"><a href="/user/cadastrar">Cadastrar-se</a></span>
+                </div>
+            </div>
+
+            <script>
+                if({{statusLogin}} == "0"){
+                    document.querySelector('.logado').style.display = 'none';
+                    document.querySelector('.deslogado').style.display = 'flex';
+                }
+            </script>
+        </div>
+    </div>
+</div>
+<div class="container-body">
+
+  

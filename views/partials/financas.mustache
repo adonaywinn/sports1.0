@@ -1,0 +1,173 @@
+<style>
+    .content-financas {
+        display: flex;
+        height: 100%;
+        width: 100%;
+        background-color: #fff;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        border-radius: 2px 2px 2px 2px;
+        flex-direction: column;
+        margin-left: 10px;
+    }
+    .title {
+        display: flex;
+        width: 100%;
+        height: 5em;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: row;
+        border-bottom: 1px solid #ccc;
+        background-color: #ededed;
+    }
+    .title i {
+        margin-left: 10px;
+        padding: 5px;
+        border-radius: 50%;
+        box-shadow: 1px 2px 5px 2px #efefef;
+        color: #333;
+        cursor: pointer;
+    }
+    .title span {
+        padding: 5px;
+        font-size: 1.6em;
+        color: #333;
+        text-transform: capitalize;
+    }
+    .financas-sub-menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 5em;
+        border-bottom: 1px solid #ccc;
+    }
+    .item-financas-sub-menu {
+        display: flex;
+        flex: 1;
+        justify-content: center;
+        align-items: center;
+    }
+    .item-financas-sub-menu:hover {
+        cursor: pointer;
+    }
+    .item-financas-sub-menu button {
+        background: none;
+        border: none;
+        color:#333;
+        font-weight: bold;
+        font-size: 1.6em;
+    }
+    .item-financas-sub-menu button:hover {
+        cursor: pointer;
+    }
+    .financas-depositar {
+        display: none;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 10px;
+        margin-top: 20px;
+    }
+    .financas-depositar-item {
+        display: flex;
+        width: 40%;
+        height: 100px;
+        background-color: #333;
+        margin-left: 5px;
+        margin-bottom: 5px;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    .deposito {
+        display: flex;
+    }
+    .saque {
+        display: none;
+    }
+    .retiradas {
+        display: none;
+    }
+    .content-hitorico-financas {
+        display: flex;
+        height: auto;
+        width:100%;
+        flex-direction: column; 
+    }
+    .item-historico-financas {
+        display: flex;
+        width: 100%;
+        padding: 20px 10px;
+        padding-left:0;
+        padding-right:0;
+        flex-direction: column;
+        border-bottom: 1px solid #ccc;
+    }
+    .item-historico-financas span {
+        width: 100%;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+</style>
+
+<div class="content-financas">
+    <div class="title">
+        <a href="/account"><i class="fas fa-arrow-left"></i></a>
+        <span>Finanças</span>
+    </div>
+    <div class="financas-sub-menu">
+        <div class="item-financas-sub-menu"><button id="depositar" >Depositar</button></div>
+        <div style=" border-left: 1px solid #ccc; border-right: 1px solid #ccc;" class="item-financas-sub-menu"><button id="saque">Saque</button></div>
+        <div class="item-financas-sub-menu"><button id="retiradas" >Historico de pagamentos</button></div> 
+    </div>
+    <div class="financas-depositar deposito">
+        <span style="padding-left: 12em; width: 100% !important; background: none !important; display: flex; height: auto;"><div id="seta"></div></span>
+        <p style="width: 100%; color:#050a30; margin-left:10px; margin-bottom: 5px; font-size:1.9em; ">Escolha sua forma de pagamento.</p>
+        <span class="financas-depositar-item">PIX</span>
+        <span class="financas-depositar-item">PIX</span>
+        <span class="financas-depositar-item">PIX</span>
+        <span class="financas-depositar-item">deposti</span>
+    </div>
+    <div class="financas-depositar saque">
+        <span style="justify-content: center; width: 100% !important; background: none !important; display: flex; height: auto;"><div id="seta"></div></span>
+        <p style="width: 100%; color:#050a30; margin-left:10px; margin-bottom: 5px; font-size:1.9em; ">Escolha sua forma de Saque.</p>
+        <p style="width: 100%; color: #ccc; margin-left:10px; margin-bottom: 5px; border-radius: 5px; font-size:1.2em; ">Você pode sacar 500 R$ no total. Para saques acima de 500R$, você deve completar o processo de verificação na página de verificação</p>
+    </div>
+    <div class="financas-depositar retiradas">
+        <span style="justify-content: flex-end; padding-right: 12em; width: 100% !important; background: none !important; display: flex; height: auto;"><div id="seta"></div></span>
+        <p style="width: 100%; color:#050a30; margin:10px 0; font-size:1.9em; align-self: flex-end; ">Historico de pagamento. <i style="color:#050a30; font-size: 1.4em; margin-right: 10px;" class="fas fa-hand-holding-usd"></i></p>
+        <div class="content-hitorico-financas">
+            <div class="item-historico-financas">
+                <span style="font-size: 1.5em; color:#333;">15 nov 2022, 16:13 - Saque</span>
+                <span style="font-size: 2.0em; color:#050a30;">R$ 100.00</span>
+                <span style="font-size: 1.5em; color:#ccc;">pix</span>
+            </div>
+            <div class="item-historico-financas">
+                <span style="font-size: 1.5em; color:#333;">10 nov 2022, 10:25 - Depósito</span>
+                <span style="font-size: 2.0em; color:#050a30;">R$ 10.00</span>
+                <span style="font-size: 1.5em; color:#ccc;">pix</span>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+        document.querySelector("#depositar").onclick = function(){
+            document.querySelector('.retiradas').style.display = "none";
+            document.querySelector('.saque').style.display = "none";
+            document.querySelector('.deposito').style.display = "flex";
+        }
+        document.querySelector("#saque").onclick = function(){
+            document.querySelector('.retiradas').style.display = "none";
+            document.querySelector('.saque').style.display = "flex";
+            document.querySelector('.deposito').style.display = "none";
+        }
+        document.querySelector("#retiradas").onclick = function(){
+            document.querySelector('.retiradas').style.display = "flex";
+            document.querySelector('.saque').style.display = "none";
+            document.querySelector('.deposito').style.display = "none";
+        }
+
+        
+        
+</script>

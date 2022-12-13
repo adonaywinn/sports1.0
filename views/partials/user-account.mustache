@@ -1,0 +1,89 @@
+<style>
+    .right {
+        border-left:none !important;
+    }
+    .content-user-account {
+        display: flex;
+        width:100%;
+        background-color: #ededed;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        border-radius: 2px 2px 2px 2px;
+        flex-direction: column;
+        margin-left: 10px;
+    }
+    .item-user-account {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        border-bottom: 1px solid #fafafa;
+    }
+    .item-user-account a {
+        text-decoration: none;
+        color: #333;
+    }
+    .item-account {
+        display: flex;
+        width: 94%;
+        color:#000;
+        padding: 15px;
+        font-size: 1.6em;
+        font-weight: 400;
+    }
+    .item-account i {
+        color: #333;
+        font-size: 1.2em;
+        margin-right: 10px;
+    }
+    .button-item {
+        display: flex;
+        flex: 1;
+    }
+    .button-item button, i {
+        background: none;
+        border: none;
+        font-size: 1.6em;
+    }
+    .buttonbalance-account i {
+        font-size: 1em;
+        transform: rotate(-90deg);
+    }
+</style>
+
+<div class="content-user-account">
+    <div class="item-user-account">
+        <div class="item-account"><i class="fa-solid fa-file-invoice"></i><a href="/account/dados-pessoais">Dados Pessoais</a> </div>
+        <div class="button-item"><button class="buttonbalance-account"><i style="color:#333;" class="dropdown-balance fas fa-caret-down"></i></button></div>
+    </div>
+    <div class="item-user-account">
+        <div class="item-account"><i class="fas fa-wallet"></i><a href="/account/financas"> Financeiro</a> </div>
+        <div class="button-item"><button class="buttonbalance-account"><i style="color:#333;" class="dropdown-balance fas fa-caret-down"></i></button></div>
+    </div>
+    <div class="item-user-account">
+        <div class="item-account"><i class="fa-solid fa-layer-group"></i><a href="/account/minhas-apostas"> Minhas apostas</a> </div>
+        <div class="button-item"><button class="buttonbalance-account"><i style="color:#333;" class="dropdown-balance fas fa-caret-down"></i></button></div>
+    </div>
+    <div class="item-user-account">
+        <div class="item-account"><i class="fa-solid fa-gift"></i><a href="/account/promocoes"> Promoções</a> </div>
+        <div class="button-item"><button class="buttonbalance-account"><i style="color:#333;" class="dropdown-balance fas fa-caret-down"></i></button></div>
+    </div>
+    <div class="item-user-account">
+        <div class="item-account"><i class="fa-solid fa-sliders"></i><a href="/account/configuracoes"> Configurações</a> </div>
+        <div class="button-item"><button class="buttonbalance-account"><i style="color:#333;" class="dropdown-balance fas fa-caret-down"></i></button></div>
+    </div>
+    <!--div class="item-user-account">
+        <div class="item-account"><i class="fa-solid fa-globe"></i> Idioma</div>
+        <div class="button-item"><button class="buttonbalance-account"><i style="color:#333;" class="dropdown-balance fas fa-caret-down"></i></button></div>
+    </div-->
+    <div class="item-user-account">
+        <div class="item-account"><i class="fas fa-question"></i><a href="/account/help-info"> Ajuda e Informações</a></div>
+        <div class="button-item"><button class="buttonbalance-account"><i style="color:#333;" class="dropdown-balance fas fa-caret-down"></i></button></div>
+    </div>
+    <div class="item-user-account">
+        <div class="item-account"><i class="fas fa-sign-out-alt"></i><a href="#"> Sair</a></div>
+        <div class="button-item"><button class="buttonbalance-account"></button></div>
+    </div>
+</div>
+
+<script></script>

@@ -1,0 +1,105 @@
+<style>
+    .content-minhas-apostas {
+        display: flex;
+        height: 100%;
+        width: 100%;
+        background-color: #fff;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        border-radius: 2px 2px 2px 2px;
+        flex-direction: column;
+        margin-left: 10px;
+    }
+    .title {
+        display: flex;
+        width: 100%;
+        height: 5em;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: row;
+        border-bottom: 1px solid #ccc;
+        background-color: #ededed;
+    }
+    .title i {
+        margin-left: 10px;
+        padding: 5px;
+        border-radius: 50%;
+        box-shadow: 1px 2px 5px 2px #efefef;
+        color: #333;
+        cursor: pointer;
+    }
+    .title span {
+        padding: 5px;
+        font-size: 1.6em;
+        color: #333;
+        text-transform: capitalize;
+    }
+    .financas-sub-menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 5em;
+        border-bottom: 1px solid #ccc;
+    }
+    .item-financas-sub-menu {
+        display: flex;
+        flex: 1;
+        justify-content: center;
+        align-items: center;
+    }
+    .item-financas-sub-menu:hover {
+        cursor: pointer;
+    }
+    .item-financas-sub-menu button {
+        background: none;
+        border: none;
+        color:#333;
+        font-weight: bold;
+        font-size: 1.6em;
+    }
+    .item-financas-sub-menu button:hover {
+        cursor: pointer;
+    }
+    .abertas {
+        display:flex;
+        flex-direction:column;
+        width:100%;
+        color:#333;
+    }
+   .concluidas {
+        display:none;
+        flex-direction:column;
+        width:100%;
+        color:#333;
+    }
+</style>
+
+<div class="content-minhas-apostas">
+    <div class="title">
+        <a href="/account"><i class="fas fa-arrow-left"></i></a>
+        <span>Minhas Apostas</span>
+    </div>
+    <div class="financas-sub-menu">
+        <div class="item-financas-sub-menu"><button id="abertas" >Abertas</button></div>
+        <div style=" border-left: 1px solid #ccc; border-right: 1px solid #ccc;" class="item-financas-sub-menu"><button id="concluidas">Concluidas</button></div>
+    </div>
+    <div class="abertas">
+        <span style="padding-left: calc(47% / 2); margin-top:3em; width: 100% !important; background: none !important; display: flex; height: auto;"><div id="seta"></div></span>
+        abertas
+     </div>
+    <div class="concluidas">
+        <span style=" padding-left: 73.5%; margin-top:3em; width: 100% !important; background: none !important; display: flex; height: auto;"><div id="seta"></div></span>
+        concluidas
+    </div>
+</div>
+<script>   
+    document.querySelector("#abertas").onclick = function(){
+            document.querySelector('.concluidas').style.display = "none";
+            document.querySelector('.abertas').style.display = "flex";
+        }
+        document.querySelector("#concluidas").onclick = function(){
+            document.querySelector('.abertas').style.display = "none";
+            document.querySelector('.concluidas').style.display = "flex";
+        }
+</script>

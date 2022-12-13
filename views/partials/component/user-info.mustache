@@ -1,0 +1,118 @@
+<style>
+.titulo {
+    font-size: 2.6em;
+    font-weight: bold;
+}
+.titulo2 {
+    font-size: 2em;
+    font-weight: bold;
+}
+.titulo3 {
+    font-size: 1.6em;
+    font-weight: bold;
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height:15em;
+    min-width: 30em;
+    background-color: black;
+    border-radius: 2px 2px 2px 2px;
+}
+.user-info-account {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: auto;
+    padding: 5px;
+    width: 90%;
+    border-bottom: 1px solid #333;
+}
+.user-info-account img {
+    height: 6em;
+    width: 6em;
+    margin-right: 10px;
+}
+.user-info-account span {
+    font-size: 1.6em;
+}
+.user-info-ballance {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+}
+.buttonbalance {
+    background:none;
+    border: none;
+}
+.dropdown-content {
+    display: none;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    background-color: #ededed;
+    color: #000;
+    min-height: 6em;
+    height: auto;
+    width:30em;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    margin-top: 29em;
+    border-radius: 2px 2px 0 0;
+}
+.dropdown-content span {
+    width: 100%;
+    margin-left: 10px;
+    color:#000;
+    text-transform: capitalize;
+}
+.info-balance {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    padding: 10px;
+}
+.info-balance span {
+    width: 100%;
+    margin-right: 5px;
+}
+</style>
+<div class="user-info">
+    <div class="user-info-account">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/d/d3/Microsoft_Account.svg" border="0">
+        <span>Francisco Adonay Ferreira do Nascimento</span>
+    </div>
+    <div class="user-info-ballance">
+        <div style="display: flex; flex-direction:row; height: 100%; width: 50%; justify-content:flex-start; padding-left: 10px; align-items:center;">
+            <b class="balance-user" style="display:none;">* * * * *</b>
+            <b style="margin-right: 10px; font-size: 1.8em;" class="balance-on-user">0,19</b>
+            <button class="buttonbalance"><i class="dropdown-balance fas fa-caret-down"></i></button>
+            
+        </div>
+        <div style="display: flex; flex-direction:row; height: 100%; width: 50%; justify-content:flex-end; padding-right: 10px; align-items:center;">
+            <i style="margin-right: 10px; font-size:1.6em !important;" class="hidebalanceon fas fa-eye"></i>
+            <i class="hidebalanceon fas fa-sync"></i>
+        </div>
+    </div>
+    <div class="dropdown-content">
+        <span class="titulo3">Conta Principal</span>
+        <div class="info-balance"><span>aposta não resolvida</span><span style="text-align: right;">R$ 0,00</span></div>
+        <div class="info-balance"><span>à espera de pagamento</span><span style="text-align: right;">R$ 0,00</span></div>
+        <div class="info-balance"><span>Disponível</span><span class="balance" style="text-align: right;">R$ 0,19</span></div>
+    </div>
+</div>
+<script>
+     window.onload = function() {
+         
+    }
+</script>

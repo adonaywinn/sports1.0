@@ -1,0 +1,146 @@
+<style>
+    .separate {
+        display: flex;
+        width: 100%;
+        height: 1px;
+        border-top: 1px solid #141413;
+        border-bottom: 1px solid #141413;
+    }
+    .menu-vertical-principal {
+        display: flex;
+        flex: 1;
+        overflow-y: scroll;
+        flex-direction: column;
+        
+    }
+    .one-menu-vertical-principal {
+        display: flex;
+        height: 20em;
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .one-menu-vertical-principal span {
+        padding: 10px;
+        margin: 5px 0;
+        width: 80%;
+        border-radius: 1em;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .one-menu-vertical-principal button, i, span:hover {
+        background-color: #292621;
+        cursor: pointer;
+        color: #fff;
+        
+    }
+    .one-menu-vertical-principal button {
+        background: none;
+        border: none;
+        display: flex;
+        flex: 1;
+        justify-content: flex-start;
+        align-items: center;
+        font-weight: bold;
+        color: #9d9d9d;
+        text-shadow: 1px 1px 1px #333;
+        text-transform: capitalize;
+    }
+    .one-menu-vertical-principal button i{
+        margin-right: 10px;
+        color: #9d9d9d;
+        background: none !important;
+    }
+    .one-menu-vertical-principal .item-principal-menu-vertical-principal {
+        background-color: #292621; 
+    }
+    .two-menu-vertical-principal {
+        display: flex;
+        height: auto;
+        width: 100%;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .two-menu-vertical-principal span {
+        display: flex;
+        padding:20px 10px;
+        margin: 5px 2px;
+        width: 40%;
+        border-radius: 10em;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        background-color: #403c34;
+        color: #fff;
+        font-size: 1.8em;
+    }
+    .two-menu-vertical-principal button, i, span:hover {
+        background-color: #292621;
+        cursor: pointer;
+        color: #fff;
+        
+    }
+    .two-menu-vertical-principal button {
+        background: none;
+        border: none;
+        display: flex;
+        flex: 1;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+        color: #fff;
+        text-align: center;
+        text-shadow:1px 1px 1px #333;
+        
+    }
+    .two-menu-vertical-principal button i{
+        margin-right: 10px;
+        color: #9d9d9d;
+        background: none !important;
+    }
+    .title-two-menu-vertical-principal {
+        display: flex;
+        width: 100%;
+        font-size: 2em;
+        padding: 10px;
+        color: #9d9d9d;
+        text-shadow: 1px 1px 1px #333;
+        font-weight: bolder;
+    }
+</style>
+<div class="menu-vertical-principal">
+    <div class="one-menu-vertical-principal">
+        <span class="item-principal-menu-vertical-principal"><button onclick="selectMenu('item-principal-menu-vertical-principal', 'principal-content');"><i class="fas fa-home"></i>principal</button></span>
+        <span class="item-Destaques-menu-vertical-principal"><button onclick="selectMenu('item-Destaques-menu-vertical-principal', 'principal-content');"><i class="fas fa-flag"></i>Destaques</button></span>
+        <span class="item-Favoritos-menu-vertical-principal"><button onclick="selectMenu('item-Favoritos-menu-vertical-principal', 'principal-content');"><i class="fas fa-star"></i>Favoritos</button></span>
+    </div>
+    <div class="separate"></div>
+    <div class="two-menu-vertical-principal">
+        <div class="title-two-menu-vertical-principal">Categorias</div>
+        <span style="background-color:#e5e338;"><button>Novo</button></span>
+        <span><button>Destaques</button></span>
+        <span><button>Mais Jogados</button></span>
+        <span style="background-color: #292621;"><button>Ver Todos</button></span>
+
+        <div class="separate"></div>
+
+        <div class="title-two-menu-vertical-principal">Temas</div>
+        <span><button>Eguto</button></span>
+        <span><button>777</button></span>
+        <span><button>Fruta</button></span>
+        <span><button>Futebol</button></span>
+        <span><button>Cristais</button></span>
+        <span style="background-color: #292621;"><button>Ver Todos</button></span>
+    </div>
+</div>
+<script> 
+    function selectMenu(menuSelec, elem){  
+        for(const seleco of document.querySelector('.one-menu-vertical-principal').children){
+            seleco.style.backgroundColor = "transparent";
+        }
+        document.querySelector('.'+menuSelec).style.backgroundColor = "#292621";
+    }
+</script>

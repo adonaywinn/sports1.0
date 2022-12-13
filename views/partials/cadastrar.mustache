@@ -1,0 +1,200 @@
+<style>
+    .login {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: 100%;
+    }
+    .login-template {
+        display: flex;
+        width: 50%;
+        height: 100%;
+        background-color: #e5e338;
+    }
+    .login-form {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        height: 100%;
+        background-color: #171716;
+        justify-content: center;
+        align-items: center;
+    }
+    .logo-login {
+        display: flex;
+    }
+    .title-login{
+        display: flex;
+        background-color: #e5e338;
+        font-size: 2em;
+        width: 40%;
+        padding:20px 10px;
+        text-shadow: 1px 1px 1px #9d9d9d;
+        font-weight: bold;
+        align-items: center;
+        color:#171716;
+        justify-content: flex-start;
+        align-self: flex-start;
+        border-radius:0 10px 10px 0px;
+        animation-duration: 1.2s;
+        animation-name: slidein;
+    }
+@keyframes slidein {
+    from {
+        font-size: 0em;
+        width: 0%
+    }
+
+    to {
+            font-size: 2em;
+            width: 40%;
+        }
+}
+    .form-login {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-around;
+        width: 100%;
+        padding:3em 10px;
+        flex-wrap: wrap;
+    }
+    .form-login input{
+        width: 100%;
+	    padding: 20px;
+	    border: none;
+	    border-radius: 10px;
+        background-color: aliceblue;
+        color:#292621;
+        font-size: 1.8em;
+    }
+    .btn-form-login {
+        display: flex;
+        width: 100%;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    .btn-form-login button {
+        display: flex;
+        padding: 20px 30px;
+        margin-right: 2%;
+        border-radius: 10px;
+        border: none;
+        background-color: #e5e338;
+        color: #171716;
+        text-shadow: 1px 1px 1px #fff;
+        font-size: 1.6em;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    .content-input {
+        display: flex;
+        width: 47%;
+        flex-direction: column;
+        position: relative;
+        margin-bottom: 2em;
+    }
+    .content-input-mid {
+        display: flex;
+        width: 22%;
+        flex-direction: column;
+        position: relative;
+        margin-bottom: 2em;
+    }
+    .content-alert {
+        display: flex;
+        width: 100%;
+    }
+    .content-alert span {
+        display: flex;
+        width: 80%;
+        background-color: #292621;
+        border: 1px solid #e5e338;
+        border-radius: 5px;
+        padding: 20px 10px;
+        margin: 2em 1.5%; 
+        font-size: 1.8em;
+        color: #9d9d9d;
+    }
+    .label-input {
+        position: absolute;
+        left: 22px;
+        top:16px;
+        pointer-events: none;
+        transition: 0.5s;
+        opacity:.5;
+        color: #171716;
+        font-size: 1.8em;
+    }
+    .content-input input:focus {
+        box-shadow: 0 0 0 0;
+        outline: 0;
+    }
+    .content-input-mid input:focus {
+        box-shadow: 0 0 0 0;
+        outline: 0;
+    }
+    .content-input input:focus ~ span,
+    .content-input-mid input:focus ~ span,
+    .content-input-mid input:valid ~ span, 
+    .content-input input:valid ~ span {
+        transform: translateY(-1.7em);
+        font-size: 1.9em;
+        opacity: 1;
+        color:#f1f1f1;
+        font-weight: bold;
+        z-index: 99;
+        text-shadow: 1px 1px 1px #222;
+        left: 20px;
+    } 
+    .danger {
+        border: 1px solid #ff0000 !important;
+    }
+    .alert {
+        border: 1px solid #e5e338 !important;
+    }
+    .concluido {
+        border: 1px solid green !important; 
+    }
+</style>
+<div class="login">
+    <div class="login-template">
+        
+    </div>
+    
+    <div class="login-form">
+        <div class="title-login">Bem Vindo - Faça seu Cadastro</div>
+        <div class="form-login">
+            <div class="content-input">
+                <input class="input-login" onfocus="onFocusForm(this, '(dd) 9 9999-0000');" onblur="offFocusForm(this, '')" required type="text" name="usuario">
+                <span class="label-input">Telefone</span>
+            </div>
+            <div class="content-input">
+                <input class="input-login" onfocus="onFocusForm(this, 'seuemail@email.com');" onblur="offFocusForm(this, '')"  required type="text" name="usuario">
+                <span class="label-input">E-mail</span>
+            </div>
+            <div class="content-input">
+                <input class="input-login" onfocus="onFocusForm(this, 'João Candido Martins');" onblur="offFocusForm(this, '')"  required type="text" name="usuario">
+                <span class="label-input">Nome Completo</span>
+            </div>
+            <div class="content-input-mid">
+                <input class="input-login" onfocus="onFocusForm(this, '00/00/0000');" onblur="offFocusForm(this, '')"  required type="text" name="usuario">
+                <span class="label-input">Data de Nascimento</span>
+            </div>
+            <div class="content-input-mid">
+                <input class="input-login" onfocus="onFocusForm(this, 'Digite...');" onblur="offFocusForm(this, '')"  required type="text" name="usuario">
+                <span class="label-input">País</span>
+            </div>
+            <div class="content-input">
+                <input class="input-login" onfocus="onFocusForm(this, 'Digite...');" onblur="offFocusForm(this, '')"  required type="text" name="usuario">
+                <span class="label-input">Cidade</span>
+            </div>
+            <div class="content-input">
+                <input class="input-login" onfocus="onFocusForm(this, '000000000-00');" onblur="offFocusForm(this, '')"  required type="text" name="usuario">
+                <span class="label-input">Cpf</span>
+            </div>
+            <div class="content-alert"><span class="concluido">nao foi possivel fazer o cadastro.</span></div>
+            <div class="btn-form-login"><button>Concluir Cadastro</button></div>
+        </div>
+    </div>
+</div>
