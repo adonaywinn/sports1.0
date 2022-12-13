@@ -24,4 +24,4 @@ server.use('/user', user_1.default);
 server.use((req, res) => {
     res.status(404).send('<a href="http://localhost/">Pagiona Nao Encontrada</a>');
 });
-server.listen(process.env.PORT);
+server.listen(3000);
